@@ -1,0 +1,285 @@
+<!-- Control sidebar content goes here -->
+<h5>Customize AdminLTE</h5>
+<hr class="mb-2">
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isNoNavbarBorder"
+        (change)="toggleNoNavbarBorder()"><span>No Navbar border</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isBodySmallText"
+        (change)="toggleBodySmallText()"><span>Body small text</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isNavbarSmallText"
+        (change)="toggleNavbarSmallText()"><span>Navbar small text</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isSidebarNavSmallText"
+        (change)="toggleSidebarNavSmallText()"><span>Sidebar nav small text</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isFooterSmallText"
+        (change)="toggleFooterSmallText()"><span>Footer small text</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isSidebarNavFlatStyle"
+        (change)="toggleSidebarNavFlatStyle()"><span>Sidebar nav flat style</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isSidebarNavLegacyStyle"
+        (change)="toggleSidebarNavLegacyStyle()"><span>Sidebar nav legacy style</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isSidebarNavCompact"
+        (change)="toggleSidebarNavCompact()"><span>Sidebar nav compact</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isSidebarNavChildIndent"
+        (change)="toggleSidebarNavChildIndent()"><span>Sidebar nav child indent</span></div>
+<div class="mb-1"><input type="checkbox" class="mr-1"
+        [checked]="layoutOptions.isMainSidebarDisableHoverOrFocusAutoExpand"
+        (change)="toggleMainSidebarDisableHoverOrFocusAutoExpand()"><span>Main Sidebar disable hover/focus auto
+        expand</span></div>
+<div class="mb-4"><input type="checkbox" class="mr-1" [checked]="layoutOptions.isBrandSmallText"
+        (change)="toggleBrandSmallText()"><span>Brand small text</span></div>
+<h6>Navbar Variants</h6>
+<div class="d-flex">
+    <div class="d-flex flex-wrap mb-3">
+        <div class="bg-primary elevation-2" (click)="setNavbarVariants('dark','primary')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-secondary elevation-2" (click)="setNavbarVariants('dark','secondary')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-info elevation-2" (click)="setNavbarVariants('dark','info')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-success elevation-2" (click)="setNavbarVariants('dark','success')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-danger elevation-2" (click)="setNavbarVariants('dark','danger')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-indigo elevation-2" (click)="setNavbarVariants('dark','indigo')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-purple elevation-2" (click)="setNavbarVariants('dark','purple')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-pink elevation-2" (click)="setNavbarVariants('dark','pink')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-teal elevation-2" (click)="setNavbarVariants('dark','teal')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-cyan elevation-2" (click)="setNavbarVariants('dark','cyan')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-dark elevation-2" (click)="setNavbarVariants('dark','dark')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-gray-dark elevation-2" (click)="setNavbarVariants('dark','gray-dark')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-gray elevation-2" (click)="setNavbarVariants('dark','gray')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-light elevation-2" (click)="setNavbarVariants('light','light')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-warning elevation-2" (click)="setNavbarVariants('light','warning')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-white elevation-2" (click)="setNavbarVariants('light','white')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+        <div class="bg-orange elevation-2" (click)="setNavbarVariants('light','orange')"
+            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+        </div>
+    </div>
+</div>
+<h6>Accent Color Variants</h6>
+<div class="d-flex"></div>
+<div class="d-flex flex-wrap mb-3">
+    <div class="bg-primary elevation-2" (click)="setAccentColorVariants('accent-primary')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-warning elevation-2" (click)="setAccentColorVariants('accent-warning')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-info elevation-2" (click)="setAccentColorVariants('accent-info')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-danger elevation-2" (click)="setAccentColorVariants('accent-danger')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-success elevation-2" (click)="setAccentColorVariants('accent-success')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-indigo elevation-2" (click)="setAccentColorVariants('accent-indigo')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-navy elevation-2" (click)="setAccentColorVariants('accent-navy')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-purple elevation-2" (click)="setAccentColorVariants('accent-purple')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-fuchsia elevation-2" (click)="setAccentColorVariants('accent-fuchsia')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-pink elevation-2" (click)="setAccentColorVariants('accent-pink')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-maroon elevation-2" (click)="setAccentColorVariants('accent-maroon')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-orange elevation-2" (click)="setAccentColorVariants('accent-orange')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-lime elevation-2" (click)="setAccentColorVariants('accent-lime')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-teal elevation-2" (click)="setAccentColorVariants('accent-teal')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-olive elevation-2" (click)="setAccentColorVariants('accent-olive')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+</div>
+<h6>Dark Sidebar Variants</h6>
+<div class="d-flex"></div>
+<div class="d-flex flex-wrap mb-3">
+    <div class="bg-primary elevation-2" (click)="setSidebarVariants('dark-primary')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-warning elevation-2" (click)="setSidebarVariants('dark-warning')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-info elevation-2" (click)="setSidebarVariants('dark-info')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-danger elevation-2" (click)="setSidebarVariants('dark-danger')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-success elevation-2" (click)="setSidebarVariants('dark-success')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-indigo elevation-2" (click)="setSidebarVariants('dark-indigo')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-navy elevation-2" (click)="setSidebarVariants('dark-navy')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-purple elevation-2" (click)="setSidebarVariants('dark-purple')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-fuchsia elevation-2" (click)="setSidebarVariants('dark-fuchsia')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-pink elevation-2" (click)="setSidebarVariants('dark-pink')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-maroon elevation-2" (click)="setSidebarVariants('dark-maroon')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-orange elevation-2" (click)="setSidebarVariants('dark-orange')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-lime elevation-2" (click)="setSidebarVariants('dark-lime')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-teal elevation-2" (click)="setSidebarVariants('dark-teal')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-olive elevation-2" (click)="setSidebarVariants('dark-olive')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+</div>
+<h6>Light Sidebar Variants</h6>
+<div class="d-flex"></div>
+<div class="d-flex flex-wrap mb-3">
+    <div class="bg-primary elevation-2" (click)="setSidebarVariants('light-primary')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-warning elevation-2" (click)="setSidebarVariants('light-warning')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-info elevation-2" (click)="setSidebarVariants('light-info')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-danger elevation-2" (click)="setSidebarVariants('light-danger')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-success elevation-2" (click)="setSidebarVariants('light-success')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-indigo elevation-2" (click)="setSidebarVariants('light-indigo')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-navy elevation-2" (click)="setSidebarVariants('light-navy')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-purple elevation-2" (click)="setSidebarVariants('light-purple')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-fuchsia elevation-2" (click)="setSidebarVariants('light-fuchsia')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-pink elevation-2" (click)="setSidebarVariants('light-pink')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-maroon elevation-2" (click)="setSidebarVariants('light-maroon')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-orange elevation-2" (click)="setSidebarVariants('light-orange')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-lime elevation-2" (click)="setSidebarVariants('light-lime')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-teal elevation-2" (click)="setSidebarVariants('light-teal')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-olive elevation-2" (click)="setSidebarVariants('light-olive')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+</div>
+<h6>Brand Logo Variants</h6>
+<div class="d-flex"></div>
+<div class="d-flex flex-wrap mb-3">
+    <div class="bg-primary elevation-2" (click)="setBrandLogoVariants('navbar-primary')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-secondary elevation-2" (click)="setBrandLogoVariants('navbar-secondary')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-info elevation-2" (click)="setBrandLogoVariants('navbar-info')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-success elevation-2" (click)="setBrandLogoVariants('navbar-success')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-danger elevation-2" (click)="setBrandLogoVariants('navbar-danger')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-indigo elevation-2" (click)="setBrandLogoVariants('navbar-indigo')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-purple elevation-2" (click)="setBrandLogoVariants('navbar-purple')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-pink elevation-2" (click)="setBrandLogoVariants('navbar-pink')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-teal elevation-2" (click)="setBrandLogoVariants('navbar-teal')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-cyan elevation-2" (click)="setBrandLogoVariants('navbar-cyan')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-dark elevation-2" (click)="setBrandLogoVariants('navbar-dark')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-gray-dark elevation-2" (click)="setBrandLogoVariants('navbar-gray-dark')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-gray elevation-2" (click)="setBrandLogoVariants('navbar-gray')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-light elevation-2" (click)="setBrandLogoVariants('navbar-light')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-warning elevation-2" (click)="setBrandLogoVariants('navbar-warning')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-white elevation-2" (click)="setBrandLogoVariants('navbar-white')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div>
+    <div class="bg-orange elevation-2" (click)="setBrandLogoVariants('navbar-orange')"
+        style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
+    </div><a href="javascript:void(0)">clear</a>
+</div>

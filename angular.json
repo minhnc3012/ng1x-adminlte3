@@ -1,0 +1,168 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ng1x-adminlte3": {
+      "projectType": "library",
+      "root": "projects/ng1x-adminlte3",
+      "sourceRoot": "projects/ng1x-adminlte3/src",
+      "prefix": "mn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ng1x-adminlte3/tsconfig.lib.json",
+            "project": "projects/ng1x-adminlte3/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng1x-adminlte3/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng1x-adminlte3/src/test.ts",
+            "tsConfig": "projects/ng1x-adminlte3/tsconfig.spec.json",
+            "karmaConfig": "projects/ng1x-adminlte3/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng1x-adminlte3/tsconfig.lib.json",
+              "projects/ng1x-adminlte3/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng1x-adminlte3-example": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/ng1x-adminlte3-example",
+      "sourceRoot": "projects/ng1x-adminlte3-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ng1x-adminlte3-example",
+            "index": "projects/ng1x-adminlte3-example/src/index.html",
+            "main": "projects/ng1x-adminlte3-example/src/main.ts",
+            "polyfills": "projects/ng1x-adminlte3-example/src/polyfills.ts",
+            "tsConfig": "projects/ng1x-adminlte3-example/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ng1x-adminlte3-example/src/favicon.ico",
+              "projects/ng1x-adminlte3-example/src/assets"
+            ],
+            "styles": [
+              "projects/ng1x-adminlte3-example/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ng1x-adminlte3-example/src/environments/environment.ts",
+                  "with": "projects/ng1x-adminlte3-example/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ng1x-adminlte3-example:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ng1x-adminlte3-example:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ng1x-adminlte3-example:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng1x-adminlte3-example/src/test.ts",
+            "polyfills": "projects/ng1x-adminlte3-example/src/polyfills.ts",
+            "tsConfig": "projects/ng1x-adminlte3-example/tsconfig.spec.json",
+            "karmaConfig": "projects/ng1x-adminlte3-example/karma.conf.js",
+            "assets": [
+              "projects/ng1x-adminlte3-example/src/favicon.ico",
+              "projects/ng1x-adminlte3-example/src/assets"
+            ],
+            "styles": [
+              "projects/ng1x-adminlte3-example/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng1x-adminlte3-example/tsconfig.app.json",
+              "projects/ng1x-adminlte3-example/tsconfig.spec.json",
+              "projects/ng1x-adminlte3-example/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ng1x-adminlte3-example/e2e/protractor.conf.js",
+            "devServerTarget": "ng1x-adminlte3-example:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng1x-adminlte3-example:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng1x-adminlte3"
+}
