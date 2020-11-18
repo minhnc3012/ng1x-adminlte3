@@ -7,16 +7,19 @@ import { ng1xLTE3LayoutProvider } from './layout.provider';
 import { Ng1xLTE3LayoutStore } from './layout.store';
 import { Ng1xLTE3WrapperModule } from './wrapper/wrapper.module';
 import { Ng1xLTE3ContentModule } from './content/content.module';
-import { NgxLTE3HeaderModule } from './header/header.module';
+import { Ng1xLTE3HeaderModule } from './header/header.module';
 import { Ng1xLTE3FooterModule } from './footer/footer.module';
 import { Ng1xLTE3ControlSidebarModule } from './control-sidebar/control-sidebar.module';
 import { Ng1xLTE3MainSidebarModule } from './main-sidebar/main-sidebar.module';
 
 @NgModule({
     declarations: [],
-    imports: [CommonModule, RouterModule],
+    imports: [
+        CommonModule, 
+        RouterModule
+    ],
     exports: [
-        NgxLTE3HeaderModule,
+        Ng1xLTE3HeaderModule,
         Ng1xLTE3MainSidebarModule,
         Ng1xLTE3WrapperModule,
         Ng1xLTE3ContentModule,
@@ -28,11 +31,11 @@ import { Ng1xLTE3MainSidebarModule } from './main-sidebar/main-sidebar.module';
 export class Ng1xLTE3LayoutModule {
     /**
      * @method constructor
-     * @param parentModule NgxLTE3LayoutModule
+     * @param parentModule Ng1xLTE3LayoutModule
      */
     constructor(@Optional() @SkipSelf() parentModule: Ng1xLTE3LayoutModule) {
         if (parentModule) {
-            throw new Error('NgxLTE3LayoutModule is already loaded. Import it in the AppModule only!');
+            throw new Error('Ng1xLTE3LayoutModule is already loaded. Import it in the AppModule only!');
         }
     }
 

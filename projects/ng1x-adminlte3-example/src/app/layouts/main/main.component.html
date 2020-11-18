@@ -1,0 +1,50 @@
+<mn-ng1xlte3-layout-wrapper>
+    <mn-ng1xlte3-layout-header
+    [useToggleControlSidebar]="true"
+    (toggleMenuSidebar)="toggleMenuSidebar($event)"
+    (toggleControlSidebar)="toggleControlSidebar($event)">
+        <mn-ng1xlte3-layout-header-left>
+            <ul class="navbar-nav">
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a [routerLink]="['/']" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a [routerLink]="['/blank']" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </mn-ng1xlte3-layout-header-left>
+        <mn-ng1xlte3-layout-header-right>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="logout()">
+                        <i class="fas fa-power-off"></i>
+                    </a>
+                </li>
+            </ul>
+        </mn-ng1xlte3-layout-header-right>
+    </mn-ng1xlte3-layout-header>
+
+    <mn-ng1xlte3-layout-main-sidebar>
+        <mn-ng1xlte3-sidebar-user-panel>
+            <div class="image">
+                <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" />
+            </div>
+            <div class="info">
+                <a [routerLink]="['/profile']" class="d-block">Alexander Pierce</a>
+            </div>
+        </mn-ng1xlte3-sidebar-user-panel>
+        <mn-ng1xlte3-sidebar-menu-treeview>
+            <mn-ng1xlte3-sidebar-menu [menu]="sidebarMenu"></mn-ng1xlte3-sidebar-menu>
+        </mn-ng1xlte3-sidebar-menu-treeview>
+    </mn-ng1xlte3-layout-main-sidebar>
+
+    <mn-ng1xlte3-layout-content>
+        <router-outlet></router-outlet>
+    </mn-ng1xlte3-layout-content>
+
+    <!-- <mn-ng1xlte3-layout-footer></mn-ng1xlte3-layout-footer> -->
+    <mn-ng1xlte3-layout-control-sidebar>
+        <mn-ng1xlte3-control-customize-adminlte></mn-ng1xlte3-control-customize-adminlte>
+    </mn-ng1xlte3-layout-control-sidebar>
+    <div id="sidebar-overlay" (click)="toggleMenuSidebar()"></div>
+</mn-ng1xlte3-layout-wrapper>

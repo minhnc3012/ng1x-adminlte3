@@ -1,15 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { Ng1xAdminlte3Module } from 'ng1x-adminlte3';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Ng1xLTE3LayoutModule} from 'ng1x-adminlte3';
+import { LayoutMainComponent } from './layouts/main/main.component';
+import { layoutConfig } from './config/layout.config';
 
 @NgModule({
   declarations: [
-    AppComponent    
+    AppComponent,
+    LayoutMainComponent
   ],
   imports: [
     BrowserModule,
-    Ng1xAdminlte3Module
+    BrowserAnimationsModule,
+    //Ng1xLTE3LayoutModuleforRoot(layoutConfig),
+    Ng1xLTE3LayoutModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

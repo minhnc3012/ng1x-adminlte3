@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { NgxLTE3HeaderComponent, NgxLTE3LayoutHeaderRightComponent, NgxLTE3LayoutHeaderLeftComponent } from './header.component';
+import { Ng1xLTE3HeaderComponent, Ng1xLTE3LayoutHeaderRightComponent, Ng1xLTE3LayoutHeaderLeftComponent } from './header.component';
 
 
 @NgModule({
     imports: [CommonModule, RouterModule ],
-    exports: [NgxLTE3HeaderComponent, NgxLTE3LayoutHeaderLeftComponent, NgxLTE3LayoutHeaderRightComponent],
-    declarations: [NgxLTE3HeaderComponent, NgxLTE3LayoutHeaderLeftComponent, NgxLTE3LayoutHeaderRightComponent]
+    exports: [Ng1xLTE3HeaderComponent, Ng1xLTE3LayoutHeaderLeftComponent, Ng1xLTE3LayoutHeaderRightComponent],
+    declarations: [Ng1xLTE3HeaderComponent, Ng1xLTE3LayoutHeaderLeftComponent, Ng1xLTE3LayoutHeaderRightComponent]
 })
-export class NgxLTE3HeaderModule { }
+export class Ng1xLTE3HeaderModule { }

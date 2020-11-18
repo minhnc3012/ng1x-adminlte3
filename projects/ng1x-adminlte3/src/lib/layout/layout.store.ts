@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 /*
  *
  */
-@Injectable()
 export class Ng1xLTE3LayoutStore {
     public readonly layoutConfig: Observable<Ng1xLTE3LayoutConfig>;
 

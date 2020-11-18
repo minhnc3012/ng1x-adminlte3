@@ -7,7 +7,7 @@ import { Ng1xLTE3CollapseDirective } from './collapse.directive';
   exports: [Ng1xLTE3CollapseDirective]
 })
 export class Ng1xLTE3CollapseModule {
-  static forRoot(): ModuleWithProviders<any> {
+  static forRoot(): ModuleWithProviders<Ng1xLTE3CollapseModule> {
     return { ngModule: Ng1xLTE3CollapseModule, providers: [] };
   }
 }

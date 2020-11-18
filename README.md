@@ -1,4 +1,4 @@
-# Adminlte3
+# Ng1x-Adminlte3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 

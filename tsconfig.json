@@ -18,10 +18,6 @@
     "paths": {
       "ng1x-adminlte3": [
         "dist/ng1x-adminlte3/ng1x-adminlte3",
-        "dist/ng1x-adminlte3",
-        "dist/ng1x-adminlte3/ng1x-adminlte3",
-        "dist/ng1x-adminlte3",
-        "dist/ng1x-adminlte3/ng1x-adminlte3",
         "dist/ng1x-adminlte3"
       ]
     }

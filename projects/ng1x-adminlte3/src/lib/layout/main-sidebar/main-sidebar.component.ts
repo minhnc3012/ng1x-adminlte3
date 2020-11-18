@@ -14,20 +14,6 @@ import { Ng1xLTE3LayoutStore } from '../layout.store';
 import { removeSubscriptions } from '../../helpers';
 import { LayoutOptions } from '../layout.config';
 
-export interface Item {
-    id: number;
-    parentId: number;
-    label: string;
-    route?: string;
-    iconClasses?: string;
-    children?: Array<Item>;
-    isActive?: boolean;
-    isCollapsed?: boolean;
-    disableCollapse?: boolean;
-}
-
-export type Items = Array<Item>;
-
 @Component({
     selector: 'mn-ng1xlte3-sidebar-user-panel',
     template: '<ng-template #templateRef><div class="user-panel mt-3 pb-3 mb-3 d-flex"><ng-content></ng-content></div></ng-template>'

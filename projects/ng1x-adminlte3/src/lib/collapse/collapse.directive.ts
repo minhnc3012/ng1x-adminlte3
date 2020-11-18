@@ -73,14 +73,14 @@ export class Ng1xLTE3CollapseDirective implements AfterViewChecked, AfterContent
   @Input() isAnimated = false;
   /** A flag indicating visibility of content (shown or hidden) */
   @Input()
-  set ngxlte3Collapse(value: boolean) {
+  set ng1xlte3Collapse(value: boolean) {
     if (!this._player || this._isAnimationDone) {
       this.isExpanded = value;
       this.toggle();
     }
   }
 
-  get ngxlte3Collapse(): boolean {
+  get ng1xlte3Collapse(): boolean {
     return this.isExpanded;
   }
 
