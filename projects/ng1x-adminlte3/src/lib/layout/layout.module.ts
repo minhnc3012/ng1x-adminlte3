@@ -11,6 +11,7 @@ import { Ng1xLTE3HeaderModule } from './header/header.module';
 import { Ng1xLTE3FooterModule } from './footer/footer.module';
 import { Ng1xLTE3ControlSidebarModule } from './control-sidebar/control-sidebar.module';
 import { Ng1xLTE3MainSidebarModule } from './main-sidebar/main-sidebar.module';
+import { Ng1xLTE3LayoutService } from './layout.service';
 
 @NgModule({
     declarations: [],
@@ -24,7 +25,7 @@ import { Ng1xLTE3MainSidebarModule } from './main-sidebar/main-sidebar.module';
         Ng1xLTE3WrapperModule,
         Ng1xLTE3ContentModule,
         Ng1xLTE3ControlSidebarModule,
-        Ng1xLTE3FooterModule
+        Ng1xLTE3FooterModule,
     ],
     providers: [RoutingService]
 })
@@ -45,10 +46,10 @@ export class Ng1xLTE3LayoutModule {
      * @param  layoutConfig [description]
      * @return [description]
      */
-    static forRoot(layoutConfig: Ng1xLTE3LayoutConfig): ModuleWithProviders<any> {
+    static forRoot(layoutConfig: Ng1xLTE3LayoutConfig): ModuleWithProviders<Ng1xLTE3LayoutModule> {
         return {
             ngModule: Ng1xLTE3LayoutModule,
-            providers: [...ng1xLTE3LayoutProvider(layoutConfig), Ng1xLTE3LayoutStore]
+            providers: [...ng1xLTE3LayoutProvider(layoutConfig), Ng1xLTE3LayoutService, Ng1xLTE3LayoutStore]
         };
     }
 }

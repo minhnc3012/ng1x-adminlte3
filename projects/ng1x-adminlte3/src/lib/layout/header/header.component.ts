@@ -31,7 +31,7 @@ export class Ng1xLTE3LayoutHeaderRightComponent {
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })
-export class Ng1xLTE3HeaderComponent implements OnInit, OnDestroy {
+export class Ng1xLTE3LayoutHeaderComponent implements OnInit, OnDestroy {
     @Output() toggleMenuSidebar: EventEmitter<any> = new EventEmitter<any>();
     @Output() toggleControlSidebar: EventEmitter<any> = new EventEmitter<any>();
 

@@ -1,20 +1,36 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+import { ActivationStart, Router, RouterEvent } from '@angular/router';
+
 @Injectable()
-export class LayoutService {
-  
-  public fixHeightBehaviorSubject: BehaviorSubject<FixHeight> = new BehaviorSubject({ header: 0, footer: 0});
-  private fixHeight: FixHeight;
+export class Ng1xLTE3LayoutService {
+  public isCustomLayout: BehaviorSubject<boolean> = new BehaviorSubject(false);
+
+  private customLayout: boolean;
+
 
   /**
    * @method constructor
    * @param routingService [description]
    */
-  constructor() {}
-}
+  constructor(
+    private router: Router
+  ) {
+    this.init();
+  }
 
-export interface FixHeight {
-  header?: number;
-  footer?: number;
+  /**
+   * [init description]
+   * @method init
+   * @return [description]
+   */
+  private init() {
+    this.router.events.subscribe((event: RouterEvent) => {
+      if (event instanceof ActivationStart) {
+        this.customLayout = event.snapshot.data.customLayout;
+        this.isCustomLayout.next(!!this.customLayout);
+      }
+    });
+  }
 }

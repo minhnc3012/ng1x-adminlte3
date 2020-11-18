@@ -22,9 +22,9 @@ export function ng1xLTE3LayoutProvider(layoutConfig: Ng1xLTE3LayoutConfig) {
         provide: Ng1xLTE3LayoutStore,
         useFactory: ng1xLTE3LayoutStoreFactory,
         deps: [AdminLTE3ConfigToken]
-    }, {
+        }, {
             provide: AdminLTE3ConfigToken,
             useValue: layoutConfig
-    }
+        }
     ];
 }
