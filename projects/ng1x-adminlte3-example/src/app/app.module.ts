@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Ng1xLTE3LayoutModule, ng1xLTE3LayoutStoreFactory} from 'ng1x-adminlte3';
+import { Ng1xLTE3LayoutModule} from 'ng1x-adminlte3';
 import { LayoutMainComponent } from './layouts/main/main.component';
 import { layoutConfig } from './config/layout.config';
 
@@ -17,7 +17,7 @@ import { layoutConfig } from './config/layout.config';
     BrowserModule,
     BrowserAnimationsModule,
     Ng1xLTE3LayoutModule,
-    ng1xLTE3LayoutStoreFactory(layoutConfig),
+    Ng1xLTE3LayoutModule.forRoot(layoutConfig),
     AppRoutingModule,
   ],
   providers: [],

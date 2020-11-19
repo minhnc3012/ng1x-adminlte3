@@ -49,7 +49,7 @@ export class Ng1xLTE3LayoutModule {
     static forRoot(layoutConfig: Ng1xLTE3LayoutConfig): ModuleWithProviders<Ng1xLTE3LayoutModule> {
         return {
             ngModule: Ng1xLTE3LayoutModule,
-            providers: [...ng1xLTE3LayoutProvider(layoutConfig), Ng1xLTE3LayoutService, Ng1xLTE3LayoutStore]
+            providers: [...ng1xLTE3LayoutProvider(layoutConfig), Ng1xLTE3LayoutService]
         };
     }
 }
