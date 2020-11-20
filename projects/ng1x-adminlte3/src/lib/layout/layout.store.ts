@@ -1,7 +1,6 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, pluck } from 'rxjs/operators';
 import { Ng1xLTE3LayoutConfig, LayoutOptions } from './layout.config';
-import { Injectable } from '@angular/core';
 
 /*
  *

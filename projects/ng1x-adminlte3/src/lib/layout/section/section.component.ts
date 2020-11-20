@@ -29,7 +29,7 @@ export class Ng1xLTE3LayoutSectionContentComponent {
     // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Ng1xLTE3LayoutSectionComponent implements OnInit, AfterViewInit, OnDestroy {
-    NAV_HEADER_HEIGHT = 57;
+    SECTION_HEADER_HEIGHT = 57;
 
     @Input() fixHeader = false;
     
@@ -61,12 +61,11 @@ export class Ng1xLTE3LayoutSectionComponent implements OnInit, AfterViewInit, On
 
     ngAfterViewInit(): void {       
         if (this.fixHeader) { 
-            this.renderer.setStyle(this.sectionHeader.nativeElement, 'height', this.NAV_HEADER_HEIGHT + 'px');
+            this.renderer.setStyle(this.sectionHeader.nativeElement, 'height', this.SECTION_HEADER_HEIGHT + 'px');
             this.renderer.setStyle(this.sectionHeader.nativeElement, 'padding', '10px 0.5rem 10px');
             this.renderer.setStyle(this.sectionHeader.nativeElement, 'overflow', 'hidden');
             this.updateHeightSectionContent();
-        }
-        
+        }        
     }
 
     /**

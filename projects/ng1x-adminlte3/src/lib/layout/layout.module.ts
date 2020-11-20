@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { RoutingService } from '../services/routing.service';
 import { Ng1xLTE3LayoutConfig } from './layout.config';
 import { ng1xLTE3LayoutProvider } from './layout.provider';
-import { Ng1xLTE3LayoutStore } from './layout.store';
 import { Ng1xLTE3WrapperModule } from './wrapper/wrapper.module';
 import { Ng1xLTE3ContentModule } from './content/content.module';
 import { Ng1xLTE3HeaderModule } from './header/header.module';
